@@ -2,7 +2,7 @@ public class GuessNumber extends Guess {
 	private int num;
 
 	public GuessNumber() {
-
+		num = 0;
 	}
 
 	public boolean IsTrue() {
@@ -10,6 +10,6 @@ public class GuessNumber extends Guess {
 	}
 
 	public void Random() {
-		
+
 	}
 }
