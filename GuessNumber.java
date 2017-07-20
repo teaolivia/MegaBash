@@ -1,7 +1,8 @@
+import java.io.File;
 import java.util.Random;
 import java.util.Scanner;
 
-public class GuessNumber extends Guess {
+public class GuessNumber extends Guess implements Print {
 	private int num;
 	private static int MIN_RANGE = 1;
 	private static int MAX_RANGE = 100;
@@ -47,5 +48,9 @@ public class GuessNumber extends Guess {
 	public int CalculateScore() {
 		score++;
 		return score;
+	}
+
+	public void PrintInstruction() {
+		System.out.println();
 	}
 }
