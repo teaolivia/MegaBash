@@ -1,13 +1,14 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class GuessNumber implements Clue {
+public class GuessNumber extends Guess {
 	private int num;
 	private static int MIN_RANGE = 1;
 	private static int MAX_RANGE = 100;
 
 	public GuessNumber() {
-		num = 0; 
+		num = 0;
+		score = 0;
 	}
 
 	public int GetNum() {
@@ -27,15 +28,24 @@ public class GuessNumber implements Clue {
 		return n;
 	}
 
-	public void printClue() {
+	public void PrintClue() {
 		int n = GenerateNum();
 		int m = ReadNum();
-		if (n < m) {
-			System.out.println("The number you entered is lesser.");
-		} else if (n > m){
-			System.out.println("The number you entered is greater.");
-		} else {
-			System.out.println("Correct! The secret number is " + n);
+		while (m != n) {
+			if (n < m) {
+				System.out.println("The number you entered is lesser.");
+			} else if (n > m){
+				System.out.println("The number you entered is greater.");
+			}
+			m = ReadNum();
+			SetScore(CalculateScore());
 		}
+		System.out.println("Correct! The number is " + n + " ^__^");
+		System.out.println("Your score is... " + GetScore() + "!!");
+	}
+
+	public int CalculateScore() {
+		score++;
+		return score;
 	}
 }
