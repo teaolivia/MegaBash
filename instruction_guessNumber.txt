@@ -1,0 +1,8 @@
+GUESS THE NUMBER!
+=====================================================================
+Diberikan angka secara acak dari 1-100, ayo tebak berapakah akyu?? :3
+
+Tinggal ketik angkanya dan lalu pencet tombol enter saja, gak ribet koq!
+
+
+Good Luck, <nama player>!

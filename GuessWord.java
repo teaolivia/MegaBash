@@ -4,7 +4,7 @@ import java.lang.StringBuilder;
 import java.util.Scanner;
 import java.util.Random;
 
-public class GuessWord extends Guess, IOException {
+public class GuessWord implements Print extends Guess, IOException{
 	public String word;
 
 	public GuessWord() {
@@ -39,5 +39,7 @@ public class GuessWord extends Guess, IOException {
 		return score;
 	}
 
-
+	public void PrintInstruction() {
+		
+	}
 }

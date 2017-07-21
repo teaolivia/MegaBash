@@ -1,3 +1,3 @@
 public interface Print {
-	public void printInstruction();
+	public void PrintInstruction();
 }

@@ -1,4 +1,7 @@
-import java.io.File;
+import java.io.InputStream;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,6 +13,7 @@ public class GuessNumber extends Guess implements Print {
 	public GuessNumber() {
 		num = 0;
 		score = 0;
+		PrintInstruction();
 	}
 
 	public int GetNum() {
@@ -50,7 +54,15 @@ public class GuessNumber extends Guess implements Print {
 		return score;
 	}
 
-	public void PrintInstruction() {
-		System.out.println();
+	public void PrintInstruction() {		
+		// try {
+		// 	InputStream input = new BufferedInputStream(new FileInputStream("instruction_guessNumber.txt"));
+		// 	byte[] buffer = new byte[8192];
+		//     for (int length = 0; (length = input.read(buffer)) != -1;) {
+		//         System.out.write(buffer, 0, length);
+		//     }
+		// } finally {
+		//     input.close();
+		// }
 	}
 }
