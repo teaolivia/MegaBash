@@ -31,7 +31,7 @@ public class GuessWord implements Print extends Guess, IOException{
 	}
 
 	public void PrintClue() {
-
+		
 	}
 
 	public int CalculateScore() {
@@ -40,6 +40,13 @@ public class GuessWord implements Print extends Guess, IOException{
 	}
 
 	public void PrintInstruction() {
-		
+		try (BufferedReader br = new BufferedReader(new FileReader("instruction_guessWord.txt"))){
+			String line = null;
+			while ((line = br.readLine()) != null) {
+				System.out.println(line);
+			}
+		} catch (IOException e) {
+			System.out.println("FILE NOT FOUND");
+		}
 	}
 }

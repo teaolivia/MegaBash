@@ -1,4 +1,6 @@
 import java.io.InputStream;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -64,5 +66,13 @@ public class GuessNumber extends Guess implements Print {
 		// } finally {
 		//     input.close();
 		// }
+		try (BufferedReader br = new BufferedReader(new FileReader("instruction_guessNumber.txt"))){
+			String line = null;
+			while ((line = br.readLine()) != null) {
+				System.out.println(line);
+			}
+		} catch (IOException e) {
+			System.out.println("FILE NOT FOUND");
+		}
 	}
 }
