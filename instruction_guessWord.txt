@@ -1,0 +1,7 @@
+GUESS WORD!
+=====================================================================
+Diberikan pertanyaan mudah yang harus dijawab!
+Apakah Anda sanggup menyelesaikan semua pertanyaan??
+
+
+Good Luck, <nama player>!
