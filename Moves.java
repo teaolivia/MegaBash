@@ -5,6 +5,7 @@ public class Moves {
 	protected int damage;
 	
 	public Moves(String sfx, int damage){
+		super();
 		this.sfx = sfx;
 		this.damage = damage;
 	}

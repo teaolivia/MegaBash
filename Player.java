@@ -22,7 +22,7 @@ public class Player {
 	}
 	
 	public void PrintInfo(){
-		System.out.println("Nama : " + name);
+		System.out.println("Name : " + name);
 		System.out.println("Highest Score : " + hiScore);
 	}
 

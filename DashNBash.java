@@ -1,10 +1,11 @@
 // DashNBash.java
 
 public class DashNBash {
+	private static int MAX_TURN = 100;
 	private Turn[] T;
 	
 	public DashNBash(){
-		T = new Turn[100];
+		T = new Turn[MAX_TURN];
 	}
 	
 	public int GetTurn(){

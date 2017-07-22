@@ -1,11 +1,12 @@
 // Turn.java
 
 public class Turn {
+	private static int MAX_MOVES = 100;
 	private static int nTurn;
 	private Moves M[];
 	
 	public Turn(){
-		M = new Moves[100];
+		M = new Moves[MAX_MOVES];
 		nTurn++;
 	}
 	
