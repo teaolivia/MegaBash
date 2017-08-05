@@ -10,8 +10,16 @@ public class Turn {
 		nTurn++;
 	}
 	
-	public int Random(){
-		return 0;
+	public void randomMove(){
+		Random generateMove = new Random();
+		for (int i = 1; i <= 3; i++){
+			int idx = generateMove.nextInt(M.length);
+			// System.out.println("Move generated: " + Moves[idx]);
+		}
+	}
+	
+	public void addMove(){
+		// 
 	}
 	
 	public int GetNTurn(){
