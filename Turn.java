@@ -1,8 +1,10 @@
 // Turn.java
 
+import java.util.Random;
+
 public class Turn {
-	private static int MAX_MOVES = 100;
-	private static int nTurn;
+	private int MAX_MOVES = 5;
+	private static int nTurn = 1;
 	private Moves M[];
 	
 	public Turn(){
@@ -14,8 +16,13 @@ public class Turn {
 		Random generateMove = new Random();
 		for (int i = 1; i <= 3; i++){
 			int idx = generateMove.nextInt(M.length);
-			// System.out.println("Move generated: " + Moves[idx]);
+			
+			System.out.println(i + "Pilih salah satu move: " + M[idx]);
 		}
+	}
+	
+	public Moves GetMove(int i){
+		return M[i];
 	}
 	
 	public void addMove(){
